@@ -1,5 +1,6 @@
 # truth-values
 
+[![CI](https://github.com/vallentin/truth-values/workflows/CI/badge.svg)](https://github.com/vallentin/truth-values/actions?query=workflow%3ACI)
 [![Latest Version](https://img.shields.io/crates/v/truth-values.svg)](https://crates.io/crates/truth-values)
 [![Docs](https://docs.rs/truth-values/badge.svg)](https://docs.rs/truth-values)
 [![License](https://img.shields.io/github/license/vallentin/truth-values.svg)](https://github.com/vallentin/truth-values)

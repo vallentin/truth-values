@@ -1,0 +1,20 @@
+[package]
+name = "truth-values"
+version = "0.1.0"
+edition = "2021"
+description = "Generate all possible combinations of N bools"
+documentation = "https://docs.rs/truth-values"
+keywords = ["iterator", "product", "logic", "boolean", "truth-table"]
+categories = ["algorithms", "no-std", "mathematics"]
+repository = "https://github.com/vallentin/truth-values"
+license = "MIT"
+readme = "README.md"
+
+[badges]
+maintenance = { status = "passively-maintained" }
+
+[features]
+default = ["alloc"]
+alloc = []
+
+[dependencies]

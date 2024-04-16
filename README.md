@@ -255,6 +255,8 @@ that many variables.
 
 <!-- cargo-rdme end -->
 
+[`bool`]: https://doc.rust-lang.org/std/primitive.bool.html
+[`Vec`]: https://doc.rust-lang.org/std/vec/struct.Vec.html
 [`Iterator`]: https://doc.rust-lang.org/std/iter/trait.Iterator.html
 [`DoubleEndedIterator`]: https://doc.rust-lang.org/std/iter/trait.DoubleEndedIterator.html
 [`ExactSizeIterator`]: https://doc.rust-lang.org/std/iter/trait.ExactSizeIterator.html

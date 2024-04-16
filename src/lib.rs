@@ -304,13 +304,7 @@
 #![no_std]
 #![forbid(unsafe_code)]
 #![forbid(elided_lifetimes_in_paths)]
-#![cfg_attr(
-    debug_assertions,
-    allow(
-        missing_docs,
-        missing_debug_implementations,
-    )
-)]
+#![cfg_attr(debug_assertions, allow(missing_docs, missing_debug_implementations,))]
 #![warn(clippy::all)]
 
 #[cfg(feature = "alloc")]

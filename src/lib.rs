@@ -446,7 +446,7 @@ pub const fn count(n: usize) -> Option<usize> {
 /// ```
 #[inline]
 pub fn gen_const<const N: usize>(
-) -> impl Iterator<Item = [bool; N]> + DoubleEndedIterator + ExactSizeIterator + FusedIterator {
+) -> impl DoubleEndedIterator<Item = [bool; N]> + ExactSizeIterator + FusedIterator {
     ConstBoolsGenerator::new()
 }
 
@@ -493,9 +493,7 @@ pub fn gen_const<const N: usize>(
 ///
 /// [len()]: slice::len
 #[inline]
-pub fn gen(
-    n: usize,
-) -> impl Iterator<Item = Bools> + DoubleEndedIterator + ExactSizeIterator + FusedIterator {
+pub fn gen(n: usize) -> impl DoubleEndedIterator<Item = Bools> + ExactSizeIterator + FusedIterator {
     BoolsGenerator::new(n)
 }
 
@@ -558,7 +556,7 @@ pub fn gen(
 pub fn gen_slice<T, F>(
     n: usize,
     mut f: F,
-) -> impl Iterator<Item = T> + DoubleEndedIterator + ExactSizeIterator + FusedIterator
+) -> impl DoubleEndedIterator<Item = T> + ExactSizeIterator + FusedIterator
 where
     for<'a> F: FnMut(&[bool]) -> T,
 {
@@ -608,7 +606,7 @@ where
 #[inline]
 pub fn gen_vec(
     n: usize,
-) -> impl Iterator<Item = Vec<bool>> + DoubleEndedIterator + ExactSizeIterator + FusedIterator {
+) -> impl DoubleEndedIterator<Item = Vec<bool>> + ExactSizeIterator + FusedIterator {
     gen(n).map(Iterator::collect)
 }
 
@@ -673,7 +671,7 @@ pub fn gen_vec(
 pub fn gen_vec_slice<T, F>(
     n: usize,
     mut f: F,
-) -> impl Iterator<Item = T> + DoubleEndedIterator + ExactSizeIterator + FusedIterator
+) -> impl DoubleEndedIterator<Item = T> + ExactSizeIterator + FusedIterator
 where
     for<'a> F: FnMut(&[bool]) -> T,
 {
@@ -764,7 +762,7 @@ pub fn gen_with_buffer<'a, T, F>(
     n: usize,
     buffer: &'a mut [bool],
     mut f: F,
-) -> impl Iterator<Item = T> + DoubleEndedIterator + ExactSizeIterator + FusedIterator + 'a
+) -> impl DoubleEndedIterator<Item = T> + ExactSizeIterator + FusedIterator + 'a
 where
     for<'b> F: FnMut(&'b [bool]) -> T + 'a,
 {
